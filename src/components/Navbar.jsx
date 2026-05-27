@@ -12,8 +12,8 @@ function Navbar() {
   ]
 
   return (
-    <header className="fixed left-0 top-0 z-50 w-full border-b border-sky-500/10 bg-slate-950/80 backdrop-blur-xl">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
+    <header className="fixed left-0 top-0 z-[999] w-full border-b border-sky-500/10 bg-slate-950/90 backdrop-blur-xl">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-6 md:py-5">
         <a href="#" className="text-2xl font-black text-sky-400">
           Dauda<span className="text-white">.dev</span>
         </a>
@@ -39,7 +39,7 @@ function Navbar() {
 
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="relative z-50 rounded-xl border border-sky-500/20 bg-white/[0.04] p-3 text-xl text-sky-400 md:hidden"
+          className="relative z-[1001] rounded-xl border border-sky-500/20 bg-white/[0.04] p-3 text-xl text-sky-400 md:hidden"
           aria-label="Abrir menu"
         >
           {menuOpen ? <FaTimes /> : <FaBars />}
@@ -47,21 +47,21 @@ function Navbar() {
       </nav>
 
       {menuOpen && (
-        <div className="fixed inset-0 top-[76px] z-40 bg-slate-950/95 px-6 py-8 backdrop-blur-xl md:hidden">
-          <div className="flex flex-col gap-5">
+        <div className="fixed left-0 top-[73px] z-[1000] h-[calc(100vh-73px)] w-full bg-slate-950/98 px-5 py-8 backdrop-blur-xl md:hidden">
+          <div className="flex flex-col gap-4">
             {links.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMenuOpen(false)}
-                className="rounded-2xl border border-sky-500/20 bg-white/[0.04] px-6 py-5 text-lg font-bold text-slate-200 transition hover:border-sky-400 hover:text-sky-400"
+                className="rounded-2xl border border-sky-500/20 bg-white/[0.04] px-6 py-5 text-lg font-bold text-slate-200"
               >
                 {link.name}
               </a>
             ))}
 
             <a
-              href="https://wa.me/5548996507181?text=Olá Dauda! Vi seu portfólio e gostaria de conversar sobre um projeto."
+              href="https://wa.me/5548996197255?text=Olá Dauda! Vi seu portfólio e gostaria de conversar sobre um projeto."
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMenuOpen(false)}

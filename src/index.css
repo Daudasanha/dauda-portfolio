@@ -9,6 +9,7 @@
 
 html {
   scroll-padding-top: 90px;
+  overflow-x: hidden;
 }
 
 body {
@@ -16,6 +17,7 @@ body {
   background-color: #020617;
   color: #ffffff;
   font-family: Inter, Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 a {
